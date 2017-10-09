@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class MyString {
     public static void main(String[] args){
+        //Ссылочные типы данных
         String str = "Welcome!";
         String str2 = "Добро пожаловать! == Welcome!";
         String str3 = " _Welcome_ ";
