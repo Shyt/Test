@@ -1,6 +1,6 @@
-package Primitiv;
+package MyVariables;
 
-public class Variables {
+public class MyVariables {
     public static void main(String[] args){
         int myInt = 1;//(4байта) от -2.147.483.648 до 2.147.483.647
         short myShort = 2;//(2байта) от -32.768 до 32.767
