@@ -5,10 +5,15 @@ import java.awt.*;
 
 public class MySwing {
     public static void main(String[] args){
+
+        String[] myFontFamilys = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames(); //Узнать какие стили шрифтов есть на компе
+        for (String myFontFamily : myFontFamilys) {
+            System.out.println(myFontFamily);
+        }
+
         EventQueue.invokeLater(new Runnable(){
             @Override
             public void run() {
-
                 SimpleFrame frame = new SimpleFrame();
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //завершает работу при закрывание окна
                 //frame.setUndecorated(false); - скрывает панели
