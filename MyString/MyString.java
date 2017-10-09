@@ -1,7 +1,5 @@
 package MyString;
 
-import java.util.Scanner;
-
 public class MyString {
     public static void main(String[] args){
         //Ссылочные типы данных
@@ -65,10 +63,5 @@ public class MyString {
         System.out.println(myBulder.reverse()); //_emocleW_ еоротВ еовреП - Возращает строку в обратном порядке
         System.out.println(myBulder.delete(1,11)); //еоротВ еовреП - Удаляет символы в данной строке с указанным начальным индексом и конечным
 
-        Scanner myScanner = new Scanner(System.in);
-        //String str4 = myScanner.nextLine(); //- полная строка
-        //String str4 = myScanner.next(); - одно слово из строки
-        //int myInt4 = myScanner.nextInt(); - для чтения целочисленных значении
-        //double myDouble1 = myScanner.nextDouble(); - для чтения числового значенияс плавающей точкой
     }
 }
