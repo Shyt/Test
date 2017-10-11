@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class MyWhile {
     public static void main(String[] args){
-
         int myInt = 0;
         while(true){
             System.out.println(myInt);

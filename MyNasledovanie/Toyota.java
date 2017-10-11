@@ -1,4 +1,4 @@
-package Nasledovanie;
+package MyNasledovanie;
 
 public class Toyota extends Car{
     public int numOfSeeds = 2;

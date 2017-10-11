@@ -1,4 +1,4 @@
-package Nasledovanie;
+package MyNasledovanie;
 /*Наследование - это extends тoyota car, используем её методы и добавляем новые*/
 public class Main {
     public static void main(String[] args){

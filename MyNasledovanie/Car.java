@@ -1,4 +1,4 @@
-package Nasledovanie;
+package MyNasledovanie;
 
 public class Car {
     int maxSpeed = 5;
