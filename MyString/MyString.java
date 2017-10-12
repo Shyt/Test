@@ -62,6 +62,8 @@ public class MyString {
         System.out.println(myBulder.insert(myBulder.length(), str3)); //Первое Второе _Welcome_ - Вставляет строку на позицию
         System.out.println(myBulder.reverse()); //_emocleW_ еоротВ еовреП - Возращает строку в обратном порядке
         System.out.println(myBulder.delete(1,11)); //еоротВ еовреП - Удаляет символы в данной строке с указанным начальным индексом и конечным
-
+        System.out.printf("This is a string, %s \n", "nice"); //%s  - вставляет на это место строку. \n - перенос строки (%d - цифры, %f - флоат)
+        System.out.printf("String %10d \n", 10); //%10d - Вставляем число в ширину 10 (________10) или -10 (10________)
+        System.out.printf("String %.2f \n", 45.3226); // %.2f - вещественное число с 2 цифрами после точки
     }
 }

@@ -11,5 +11,14 @@ public class MyVariables {
         boolean myBoolean = false; //(false\true)
         char myChar = 'a';//Служит для представление отдельных символов
         System.out.println("Примитивные типы");
+
+        //Переопределение
+        float f = 12.3F; //В float из double
+        double d = 11111111111L; //В long из int
+
+        double myDouble2 = 10.2;
+        int myInt2 = (int)myDouble2; //Просто не позволит перевести потому как потеря вещественного числа
+        byte myByte2 = (byte) 129; // -127, логика придел 127 а тут 129 значит 2 поверх (127:-128:-127)
+
     }
 }
