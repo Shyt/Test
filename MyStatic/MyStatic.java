@@ -47,7 +47,6 @@ static class MyClass{ --error
 }
 */
 
-
 /* 1 Вариант
 Зачем нужен блок инциализации?
 public class MyStatic {
@@ -96,5 +95,6 @@ public class MyStatic {
 
     }
 }
+
 
  */
