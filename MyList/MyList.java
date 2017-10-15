@@ -1,7 +1,9 @@
 package MyList;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Vector;
 
 public class MyList {
     public static void main(String[] args){
@@ -33,5 +35,10 @@ public class MyList {
         }
 
         //List<Integer> list;
+
+        List list2 = new ArrayList(); //Лучше удалять
+        List list3 = new Vector(); //синхронезирований но тотже ArrayList
+        List list4 = new LinkedList(); //Лучше добавлять + Вытаскивать (в очередях и стеках)
+
     }
 }

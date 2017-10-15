@@ -3,10 +3,12 @@ package MyCollection;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.TreeSet;
 
 public class MyCollection {
     public static void main(String[] args) {
         Collection collection = new ArrayList();
+        Collection collection1 = new TreeSet(); //Отсортированая коллекция
 
         //Добавление
         collection.add("1");
