@@ -12,7 +12,10 @@ public class MyVariables {
         char myChar = 'a';//Служит для представление отдельных символов
         System.out.println("Примитивные типы");
 
-        //Переопределение
+        //Переопределение + Обертки
+        Integer j = new Integer("6");
+        Integer k = Integer.parseInt("2");
+
         float f = 12.3F; //В float из double
         double d = 11111111111L; //В long из int
 
