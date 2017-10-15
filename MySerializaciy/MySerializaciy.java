@@ -5,6 +5,7 @@ import java.io.Serializable;
 public class MySerializaciy implements Serializable {
     private int id;
     private transient String name; //Эта строка не будет добавленна
+    private static int nn = 55;//Статик не сереализуются
 
     public MySerializaciy(int id, String name){
         this.id = id;
@@ -17,10 +18,5 @@ public class MySerializaciy implements Serializable {
 
     public String getName() {
         return name;
-    }
-
-    @Override
-    public String toString() {
-        return id + " : " + name;
     }
 }
