@@ -1,6 +1,7 @@
 package MySet;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -8,6 +9,7 @@ public class MySet {
     public static void main(String[] args) {
         Set set = new HashSet();
         Set set1 = new TreeSet(); //Отсортированный
+        Set set2 = new LinkedHashSet(); //Упорядочанные
 
         //Добавление
         set.add("1");
