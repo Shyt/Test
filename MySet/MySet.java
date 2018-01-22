@@ -11,6 +11,9 @@ public class MySet {
         Set set1 = new TreeSet(); //Отсортированный
         Set set2 = new LinkedHashSet(); //Упорядочанные
 
+        /* C version 9*/
+        Set<Integer> set3 = Set.of(1,2,3,4);
+
         //Добавление
         set.add("1");
         set.add("1");

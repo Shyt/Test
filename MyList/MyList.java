@@ -18,6 +18,9 @@ public class MyList {
         /*С появлением дженериков*/
         List<String> cars2 = new ArrayList<>();
 
+        /*C 9 version */
+        List<Integer> listNew = List.of(1,2,3,4,5);
+
         //Добавлять
         cars2.add("Toyota");
         cars2.add("Ferrari");

@@ -42,6 +42,17 @@ public class MyMap {
         /*
         library.put("2", "Горе от ума");
         library.put("3", "Муму");
+
+        //С version 9
+        Map <String, String> map = Map.of("key1", "value1", "key2", "value2");
+
+        или
+
+        Map <String, String> map2 = Map.ofEntries(
+            Map.entry("key1", "value1");
+            Map.entry("key2", "value2");
+        );
+
          */
 
         //Вытаскиваем
