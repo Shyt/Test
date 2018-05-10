@@ -12,21 +12,28 @@ public class MyActionListener {
 
         //Добавляем панель
         JPanel jPanel = new JPanel();
+
+        //Добавляем ее во фрейм
         jFrame.add(jPanel);
-        JButton jButton = new JButton("Кнопка"); //Добавили кнопку на панель
+
+        //Добавили кнопку на панель
+        JButton jButton = new JButton("Кнопка");
         jPanel.add(jButton);
 
-        //Слушатель на кнопку, действие при активе
-        jButton.addActionListener(EventHandler.create(ActionListener.class, jFrame, "title", "source.text"));
     /*
+        //анонимный класс
         jButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 jPanel.setBackground(Color.DARK_GRAY); //Вся панельзальется этим цветом при клике на кнопку
-                //jFrame.setTitle(((JButton)e.getSource()).getText()); get.Source - это от куда пришел из JButton и getText - это Кнопка.
+                //jFrame.setTitle(((jButton)e.getSource()).getText()); get.Source - это от куда пришел из JButton и getText - это Кнопка.
             }
         });
     */
+
+        //Проще использование
+        jButton.addActionListener(EventHandler.create(ActionListener.class, jFrame, "title", "source.text"));
+
     }
 
     static JFrame getFrame(){
