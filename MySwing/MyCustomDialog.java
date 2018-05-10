@@ -5,26 +5,35 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MyPopupMenu {
+public class MyCustomDialog {
     static JFrame jFrame = getFrame();
     static JPanel jPanel = new JPanel();
-
 
     public static void main(String[] args) {
         jFrame.add(jPanel);
 
-        //Сплывающее меню при клике на правую кнопку мыши
-        JPopupMenu jPopupMenu = new JPopupMenu();
-        JMenuItem cup = jPopupMenu.add(new JMenuItem("Cup"));
-        jPopupMenu.add(new JMenuItem("Copy"));
-        jPanel.setComponentPopupMenu(jPopupMenu);
-
-        cup.addActionListener(new ActionListener() {
+        JButton jButton = new JButton("show dialog");
+        jPanel.add(jButton);
+        jButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println(1);
+                MyDialog myDialog = new MyDialog();
+                myDialog.setVisible(true);
             }
         });
+
+        jPanel.revalidate();
+    }
+
+    static class MyDialog extends JDialog{
+        public MyDialog(){
+            super(jFrame, "Title", true);
+            JTextField jTextField = new JTextField();
+            add(jTextField, BorderLayout.NORTH);
+            add(new JButton("button"), BorderLayout.SOUTH);
+            setBounds(500, 500, 250, 100);
+
+        }
     }
 
     static JFrame getFrame() {

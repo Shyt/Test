@@ -5,26 +5,24 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MyPopupMenu {
+public class MyColorDialog {
     static JFrame jFrame = getFrame();
     static JPanel jPanel = new JPanel();
-
 
     public static void main(String[] args) {
         jFrame.add(jPanel);
 
-        //Сплывающее меню при клике на правую кнопку мыши
-        JPopupMenu jPopupMenu = new JPopupMenu();
-        JMenuItem cup = jPopupMenu.add(new JMenuItem("Cup"));
-        jPopupMenu.add(new JMenuItem("Copy"));
-        jPanel.setComponentPopupMenu(jPopupMenu);
-
-        cup.addActionListener(new ActionListener() {
+        JButton jButton = new JButton("show dialog");
+        jPanel.add(jButton);
+        jButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println(1);
+                Color color = JColorChooser.showDialog(jPanel,"title", Color.BLUE);
+                jPanel.setBackground(color);
             }
         });
+
+        jPanel.revalidate();
     }
 
     static JFrame getFrame() {

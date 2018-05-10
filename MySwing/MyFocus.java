@@ -2,29 +2,22 @@ package MySwing;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class MyPopupMenu {
+public class MyFocus {
     static JFrame jFrame = getFrame();
     static JPanel jPanel = new JPanel();
-
 
     public static void main(String[] args) {
         jFrame.add(jPanel);
 
-        //Сплывающее меню при клике на правую кнопку мыши
-        JPopupMenu jPopupMenu = new JPopupMenu();
-        JMenuItem cup = jPopupMenu.add(new JMenuItem("Cup"));
-        jPopupMenu.add(new JMenuItem("Copy"));
-        jPanel.setComponentPopupMenu(jPopupMenu);
+        //Работа с фокусами на элементах
+        jPanel.add(new JButton("one"));
+            //Недоступный фокус
+        jPanel.add(new JButton("two")).setFocusable(false);
+            //назначение активного фокуса
+        jPanel.add(new JButton("three")).requestFocusInWindow();
 
-        cup.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println(1);
-            }
-        });
+        jPanel.revalidate();
     }
 
     static JFrame getFrame() {

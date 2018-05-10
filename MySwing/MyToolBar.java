@@ -2,10 +2,8 @@ package MySwing;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class MyPopupMenu {
+public class MyToolBar {
     static JFrame jFrame = getFrame();
     static JPanel jPanel = new JPanel();
 
@@ -13,18 +11,19 @@ public class MyPopupMenu {
     public static void main(String[] args) {
         jFrame.add(jPanel);
 
-        //Сплывающее меню при клике на правую кнопку мыши
-        JPopupMenu jPopupMenu = new JPopupMenu();
-        JMenuItem cup = jPopupMenu.add(new JMenuItem("Cup"));
-        jPopupMenu.add(new JMenuItem("Copy"));
-        jPanel.setComponentPopupMenu(jPopupMenu);
+        //toolbar - дополнительная панель всяких инстурментов
+        JToolBar jToolBar = new JToolBar("title");
+        JButton creat = new JButton("New");
+        jToolBar.add(creat);
+            //Вроде title на html
+        creat.setToolTipText("Создание");
+        jToolBar.add(new JButton("Open"));
+            //separator - разделитель
+        jToolBar.addSeparator();
+        jToolBar.add(new JButton("Close"));
 
-        cup.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println(1);
-            }
-        });
+        jPanel.add(jToolBar);
+
     }
 
     static JFrame getFrame() {
